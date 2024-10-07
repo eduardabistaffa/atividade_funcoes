@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicação de Inputs</title>
+    <script>
+        function calcularMultiplicacao() {
+            
+            var valor1 = parseFloat(document.getElementById('input1').value) || 0;
+            var valor2 = parseFloat(document.getElementById('input2').value) || 0;
+            var valor3 = parseFloat(document.getElementById('input3').value) || 0;
+
+           
+            var resultado = valor1 * valor2 * valor3;
+
+            document.getElementById('resultado').innerText = "Resultado: " + resultado;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Multiplicação de Inputs</h1>
+
+   
+    <input type="number" id="input1" placeholder="Valor 1" oninput="calcularMultiplicacao()">
+    <input type="number" id="input2" placeholder="Valor 2" oninput="calcularMultiplicacao()">
+    <input type="number" id="input3" placeholder="Valor 3" oninput="calcularMultiplicacao()">
+
+   
+    <p id="resultado">Resultado: 0</p>
+
+</body>
+</html>
